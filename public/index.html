@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>React-ES2015 starter</title>
@@ -13,9 +13,14 @@
 		<div class="root"></div>
 		
 		
-		<!-- PRODUCTION mode (a jspm bundle sfx) -->
-		<script src="./public/js/bundleFromJSPM.js"></script>
-	
+		<!--dev mode :  -->
+		<script src="jspm_packages/system.js"></script>
+		<script src="config.js"></script>
+		<script>
+				System.import('src/app/main.jsx!');
+		</script>			
+
+
 	</body>
 </html>
 	

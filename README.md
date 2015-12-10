@@ -1,8 +1,9 @@
-React JS tutorial from Facebook writen in ES6 
+React JS tutorial from Facebook written in ES6 
 =========
 
-Official ReactJS tutorial writen in ES6
+Official ReactJS tutorial written in ES6
 
+- [Original facebook tutorial](https://facebook.github.io/react/docs/tutorial.html)
 
 **feature :** 
 
@@ -19,13 +20,29 @@ Official ReactJS tutorial writen in ES6
 npm install && jspm install
 ```
 
+###Note
+
+Trick (DEMO PURPOSE ONLY - NOT PRODUCTION FRIENDLY) to make system js working with an express js server which serve only public directory.
+
+*In production, use jspm bundle sfx and don't server packages in public directory.*
+ 
+*Trick :  in public directory  you should have :*  
+- your **script sources** (here src/**/*) 
+- **jspm_packages** directory
+- **config.js**
+- configure jspm to point to public rather then root : 
+```json
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+```
 
 ##Launch
 ```bash
-jspm-server
+node server
 ```
 
->navigator should automatically open with `jspm-server` command. Otherwise just go `http://localhost:8080`
 
 ##Credits 
 
