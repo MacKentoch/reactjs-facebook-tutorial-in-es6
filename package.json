@@ -1,0 +1,40 @@
+{
+  "name": "react-es6-jspm-starter",
+  "version": "1.0.0",
+  "description": "ReactJS ES6 with JSPM starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "ReactJS",
+    "react",
+    "react",
+    "js",
+    "jspm",
+    "starter",
+    "es6",
+    "ES6",
+    "ES2015"
+  ],
+  "author": "Erwan DATIN (MacKentoch)",
+  "license": "MIT",
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "clean-css": "npm:clean-css@^3.4.8",
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "json": "github:systemjs/plugin-json@^0.1.0",
+      "jsx": "npm:jspm-loader-jsx@^0.0.7",
+      "react": "npm:react@^0.14.3",
+      "react-dom": "npm:react-dom@^0.14.3",
+      "text": "github:systemjs/plugin-text@^0.0.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.22",
+      "babel-runtime": "npm:babel-runtime@^5.8.20",
+      "core-js": "npm:core-js@^1.1.0"
+    }
+  }
+}
