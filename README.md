@@ -8,10 +8,9 @@ Official ReactJS tutorial written in ES6
 **feature :** 
 
 - ReactJS (> 0.14)
-- ES6 (*or ES2015 as it is now called since recent time*)
-- jspm (*System JS and jspm = speed of light workflow from zero*)
-  - more information on using jspm with react : [in this nice article](http://www.newmediacampaigns.com/blog/refactoring-react-components-to-es6-classes) 
-- babel (<6)
+- ES6
+- jspm (*more information on using jspm with react : [in this nice article](http://www.newmediacampaigns.com/blog/refactoring-react-components-to-es6-classes)*) 
+- babel (*< babel6*)
 
 
 All dependencies (jquery, marked, babel...) are managed by jspm.
@@ -32,7 +31,7 @@ Trick (DEMO PURPOSE ONLY - NOT PRODUCTION FRIENDLY) to make system js working wi
 - your **script sources** (here src/**/*) 
 - **jspm_packages** directory
 - **config.js**
-- configure jspm to point to public rather then root : 
+- in `package.json` :  configure jspm to point to public rather than root : 
 ```json
   "jspm": {
     "directories": {
