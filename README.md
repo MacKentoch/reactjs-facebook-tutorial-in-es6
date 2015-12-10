@@ -25,10 +25,10 @@ npm install && jspm install
 
 Trick (DEMO PURPOSE ONLY - NOT PRODUCTION FRIENDLY) to make system js working with an express js server which serve only public directory.
 
-*In production, use jspm bundle sfx and don't server packages in public directory.*
+*In production, use jspm bundle sfx and don't serve packages in public directory.*
  
 *Trick :  in public directory  you should have :*  
-- your **script sources** (here src/**/*) 
+- your **script sources** (here src/*) 
 - **jspm_packages** directory
 - **config.js**
 - in `package.json` :  configure jspm to point to public rather than root : 
@@ -48,7 +48,7 @@ node server
 ##Credits 
 
 - Facebook : for this super nice ReactJS which triggered a lot of positive evolution in the javascript world
-- Guy Bedford : who gave us system js and jspm [jspm.io](http://jspm.io/)
+- Guy Bedford : who gave us system js and [jspm](http://jspm.io/)
 
 
 ##License
