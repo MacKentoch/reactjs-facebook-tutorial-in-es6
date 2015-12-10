@@ -14,6 +14,8 @@ Official ReactJS tutorial written in ES6
 - babel (<6)
 
 
+All dependencies (jquery, marked, babel...) are managed by jspm.
+
 
 ##Intallation :
 ```bash
