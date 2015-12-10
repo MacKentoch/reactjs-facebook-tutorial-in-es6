@@ -1,7 +1,7 @@
 {
-  "name": "react-es6-jspm-starter",
+  "name": "reactjs-facebook-tutorial-in-es6",
   "version": "1.0.0",
-  "description": "ReactJS ES6 with JSPM starter",
+  "description": "ReactJS Facebook tutorial in ES6 and using JSPM",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,8 @@
     "ReactJS",
     "react",
     "react",
+    "tutorial",
+    "facebook",
     "js",
     "jspm",
     "starter",
@@ -25,12 +27,12 @@
       "baseURL": "public"
     },
     "dependencies": {
-      "chjj/marked": "github:chjj/marked@^0.3.5",
       "clean-css": "npm:clean-css@^3.4.8",
       "css": "github:systemjs/plugin-css@^0.1.20",
       "jquery": "github:components/jquery@^2.1.4",
       "json": "github:systemjs/plugin-json@^0.1.0",
       "jsx": "npm:jspm-loader-jsx@^0.0.7",
+      "marked": "github:chjj/marked@^0.3.5",
       "react": "npm:react@^0.14.3",
       "react-dom": "npm:react-dom@^0.14.3",
       "text": "github:systemjs/plugin-text@^0.0.4"

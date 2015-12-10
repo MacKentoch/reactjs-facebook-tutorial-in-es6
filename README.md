@@ -1,7 +1,7 @@
 React JS tutorial from Facebook written in ES6 
 =========
 
-Official ReactJS tutorial written in ES6
+Official ReactJS tutorial written in ES6 (JSPM + Babel).
 
 - [Original facebook tutorial](https://facebook.github.io/react/docs/tutorial.html)
 
