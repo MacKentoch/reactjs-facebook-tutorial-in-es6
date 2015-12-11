@@ -4,6 +4,6 @@ import CommentBox   from './components/CommentBox/CommenBox.jsx!';
 import data         from './mockup/data.json!json'; 
  
 ReactDOM.render(
-  <CommentBox data={data} />,
+  <CommentBox url="/api/comments" />,
   document.getElementById('content')
 );
