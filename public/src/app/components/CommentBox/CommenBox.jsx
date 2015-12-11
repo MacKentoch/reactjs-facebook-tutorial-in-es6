@@ -8,7 +8,7 @@ export default class CommentBox extends React.Component {
 	
  constructor(props) {
   super(props);
-  this.init();
+  this.init();      //init() = initialization function : just convention to avoid constructor pollution
  }
  
  init(){
@@ -23,10 +23,10 @@ export default class CommentBox extends React.Component {
       cache     : false,
       success   : (data)=>{
         this.setState({data: data});
-      }, //no more need to bind this since ES6 arrow function
+      }, //no more need to bind(this) this since ES6 arrow function
       error     : (xhr, status, err)=>{
         console.error(this.props.url, status, err.toString());
-      } //no more need to bind this since ES6 arrow function 
+      } //no more need to bind(this) this since ES6 arrow function 
     });
   }
 
@@ -34,7 +34,7 @@ export default class CommentBox extends React.Component {
   componentDidMount() {
     this.loadCommentsFromServer();
     //setInterval(this.loadCommentsFromServer.bind(this), this.props.pollInterval); //need to bind this to comboBox since loadCommentsFromServer() won't execcute in CommentBox context!
-    setInterval(()=>this.loadCommentsFromServer, this.props.pollInterval);    //ES6 version to upper line :  save pain with ES6 arrow function :  "()=>this.loadCommentsFromServer === this.loadCommentsFromServer.bind(this)" but don't have to worry about bind(this)
+    setInterval(()=>this.loadCommentsFromServer, this.props.pollInterval);          //ES6 version to upper line :  save pain with ES6 arrow function :  "()=>this.loadCommentsFromServer === this.loadCommentsFromServer.bind(this)" but don't have to worry about bind(this)
   }
 
 
