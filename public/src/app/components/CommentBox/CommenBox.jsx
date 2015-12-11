@@ -6,14 +6,14 @@ import CommentForm  from './CommentForm/CommentForm.jsx!';
 
 export default class CommentBox extends React.Component {
 	
- constructor(props) {
+  constructor(props) {
   super(props);
   this.init();      //init() = initialization function : just convention to avoid constructor pollution
- }
+  }
  
- init(){
-   this.state = {data: []}; //ES6 way to getInitialState() = set state in constructor
- }
+  init(){
+    this.state = {data: []}; //ES6 way to getInitialState() = set state in constructor
+  }
 
 
   loadCommentsFromServer() {
@@ -29,9 +29,24 @@ export default class CommentBox extends React.Component {
       } //no more need to bind(this) this since ES6 arrow function 
     });
   }
+  
+  handleCommentSubmit(comment) {
+    $.ajax({
+      url       : this.props.url,
+      dataType  : 'json',
+      type      : 'POST',
+      data      : comment,
+      success   : (data)=>{
+        this.setState({data: data});
+      },
+      error     : (xhr, status, err)=>{
+        console.error(this.props.url, status, err.toString());
+      }
+    });
+  }  
 
 
-  componentDidMount() {
+ componentDidMount() {
     this.loadCommentsFromServer();
     //setInterval(this.loadCommentsFromServer.bind(this), this.props.pollInterval); //need to bind this to comboBox since loadCommentsFromServer() won't execcute in CommentBox context!
     setInterval(()=>this.loadCommentsFromServer, this.props.pollInterval);          //ES6 version to upper line :  save pain with ES6 arrow function :  "()=>this.loadCommentsFromServer === this.loadCommentsFromServer.bind(this)" but don't have to worry about bind(this)
@@ -43,7 +58,7 @@ export default class CommentBox extends React.Component {
       <div className="commentBox">
         <h1>Comments</h1>
         <CommentList data={this.state.data} />
-        <CommentForm />
+        <CommentForm onCommentSubmit={comment => this.handleCommentSubmit(comment)} />
       </div>
     );
  }
